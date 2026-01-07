@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/store";
 
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
@@ -204,6 +206,20 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const user = useSelector((state: RootState) => state.auth.user);
+
+  const userData = user
+    ? {
+        name: user.name,
+        email: user.email,
+        avatar: "",
+      }
+    : {
+        name: "Guest",
+        email: "",
+        avatar: "",
+      };
+
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -229,7 +245,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         ))}
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={userData} />
       </SidebarFooter>
     </Sidebar>
   );

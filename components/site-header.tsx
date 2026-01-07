@@ -40,7 +40,6 @@ export function SiteHeader() {
                 href="https://shadcnstore.com/blocks"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="dark:text-foreground"
               >
                 Blocks
               </a>
@@ -51,12 +50,7 @@ export function SiteHeader() {
               size="sm"
               className="hidden sm:flex"
             >
-              <a
-                href="/landing"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="dark:text-foreground"
-              >
+              <a href="/landing" rel="noopener noreferrer" target="_blank">
                 Landing Page
               </a>
             </Button>
@@ -70,7 +64,6 @@ export function SiteHeader() {
                 href="https://github.com/silicondeck/shadcn-dashboard-landing-template"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="dark:text-foreground"
               >
                 GitHub
               </a>
