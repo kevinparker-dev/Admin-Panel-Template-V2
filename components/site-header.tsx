@@ -4,6 +4,7 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 export function SiteHeader() {
   const [searchOpen, setSearchOpen] = React.useState(false);
@@ -36,37 +37,13 @@ export function SiteHeader() {
               size="sm"
               className="hidden sm:flex"
             >
-              <a
-                href="https://shadcnstore.com/blocks"
+              <Link
+                href="#"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Blocks
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              asChild
-              size="sm"
-              className="hidden sm:flex"
-            >
-              <a href="/landing" rel="noopener noreferrer" target="_blank">
-                Landing Page
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              asChild
-              size="sm"
-              className="hidden sm:flex"
-            >
-              <a
-                href="https://github.com/silicondeck/shadcn-dashboard-landing-template"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                GitHub
-              </a>
+                Quick Links
+              </Link>
             </Button>
           </div>
         </div>

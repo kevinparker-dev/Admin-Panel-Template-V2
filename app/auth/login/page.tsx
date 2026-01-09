@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Eye, EyeOff } from "lucide-react";
-import { useDispatch } from 'react-redux';
-import { login } from '@/lib/slices/authSlice';
-import { useRouter } from 'next/navigation';
+import { useDispatch } from "react-redux";
+import { login } from "@/lib/slices/authSlice";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     // Dummy login logic
     dispatch(login());
-    router.push('/dashboard');
+    router.push("/dashboard");
   };
 
   return (
@@ -68,9 +69,12 @@ const Login = () => {
         </div>
 
         <div className="mt-6 text-end">
-          <a href="#" className="text-sm text-primary hover:underline">
+          <Link
+            href="/auth/forgot-password"
+            className="text-sm text-primary hover:underline"
+          >
             Forgot your password?
-          </a>
+          </Link>
         </div>
 
         <Button type="submit" className="w-full">
