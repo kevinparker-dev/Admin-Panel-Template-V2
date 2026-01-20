@@ -123,6 +123,8 @@ function ChartTooltipContent({
     indicator?: "line" | "dot" | "dashed";
     nameKey?: string;
     labelKey?: string;
+    label?: any;
+    payload?: any;
   }) {
   const { config } = useChart();
 
