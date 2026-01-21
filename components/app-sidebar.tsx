@@ -15,6 +15,8 @@ import {
   CreditCard,
   LayoutTemplate,
   Users,
+  BarChart3,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
@@ -77,6 +79,26 @@ const data = {
           title: "Users",
           url: "/dashboard/users",
           icon: Users,
+        },
+        {
+          title: "Test Progress Bar",
+          url: "/test-progress",
+          icon: Zap,
+        },
+      ],
+    },
+    {
+      label: "Heavy Pages",
+      items: [
+        {
+          title: "Heavy Data",
+          url: "/heavy-data",
+          icon: BarChart3,
+        },
+        {
+          title: "Heavy Charts",
+          url: "/heavy-charts",
+          icon: BarChart3,
         },
       ],
     },
